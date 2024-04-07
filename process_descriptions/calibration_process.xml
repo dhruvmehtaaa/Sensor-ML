@@ -1,0 +1,42 @@
+<sml xmlns="http://www.opengis.net/sensorML/1.0.1"
+          xmlns:gml="http://www.opengis.net/gml"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1
+                              http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd">
+
+  <Process id="calibration_process">
+    <identification>
+      <IdentifierList>
+        <identifier>
+          <Term definition="urn:ogc:def:identifier:OGC:uniqueID">calibration_process_1</Term>
+        </identifier>
+      </IdentifierList>
+    </identification>
+    <inputs>
+      <InputList>
+        <input name="raw_data"/>
+      </InputList>
+    </inputs>
+    <outputs>
+      <OutputList>
+        <output name="calibrated_data"/>
+      </OutputList>
+    </outputs>
+    <method>
+      <ComponentList>
+        <method name="Polynomial Regression Calibration">
+          <parameters>
+            <Parameter name="Degree">
+              <value>2</value>
+            </Parameter>
+            <Parameter name="Coefficients">
+              <value>0.1, 0.5, 0.2</value>
+              <!-- Coefficients for a quadratic polynomial: ax^2 + bx + c -->
+            </Parameter>
+          </parameters>
+        </method>
+      </ComponentList>
+    </method>
+  </Process>
+</sml>

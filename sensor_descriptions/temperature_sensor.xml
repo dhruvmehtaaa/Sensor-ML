@@ -1,0 +1,70 @@
+<sml xmlns="http://www.opengis.net/sensorML/1.0.1"
+          xmlns:gml="http://www.opengis.net/gml"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1
+                              http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd">
+
+  <Sensor id="temperature_sensor">
+    <identification>
+      <IdentifierList>
+        <identifier>
+          <Term definition="urn:ogc:def:identifier:OGC:uniqueID">temp_sensor_1</Term>
+        </identifier>
+      </IdentifierList>
+    </identification>
+    <characteristics>
+      <ContactList>
+        <contact>
+          <Role>
+            <Term definition="urn:ogc:def:role:OGC:manufacturer">Manufacturer</Term>
+          </Role>
+          <Organization>
+            <name>Example Inc.</name>
+            <contactInfo>
+              <phone>123-456-7890</phone>
+              <address>
+                <deliveryPoint>4044</deliveryPoint>
+                <city>Cityville</city>
+                <administrativeArea>Maharashtra</administrativeArea>
+                <postalCode>12345</postalCode>
+                <country>India</country>
+              </address>
+              <email>dhruv@dhruv.com</email>
+            </contactInfo>
+          </Organization>
+        </contact>
+      </ContactList>
+    </characteristics>
+    <capabilities>
+      <CapabilityList>
+        <capability name="Temperature Measurement">
+          <Parameter name="MeasurementRange">
+            <value>[-50, 50]</value>
+            <uom>°C</uom>
+          </Parameter>
+          <Parameter name="Resolution">
+            <value>0.1</value>
+            <uom>°C</uom>
+          </Parameter>
+        </capability>
+      </CapabilityList>
+    </capabilities>
+    <documentation>
+      <DocumentList>
+        <document>
+          <name>Calibration Report</name>
+          <description>Calibration report for temperature sensor</description>
+          <date>2024-04-07</date>
+          <location>calibration_reports/temp_sensor_calibration.pdf</location>
+        </document>
+        <document>
+          <name>Maintenance Log</name>
+          <description>Maintenance log for temperature sensor</description>
+          <date>2024-04-07</date>
+          <location>maintenance_logs/temp_sensor_maintenance.log</location>
+        </document>
+      </DocumentList>
+    </documentation>
+  </Sensor>
+</sml>

@@ -1,0 +1,58 @@
+<sml xmlns="http://www.opengis.net/sensorML/1.0.1"
+          xmlns:gml="http://www.opengis.net/gml"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.opengis.net/sensorML/1.0.1
+                              http://schemas.opengis.net/sensorML/1.0.1/sensorML.xsd">
+
+  <Sensor id="humidity_sensor">
+    <identification>
+      <IdentifierList>
+        <identifier>
+          <Term definition="urn:ogc:def:identifier:OGC:uniqueID">humidity_sensor_1</Term>
+        </identifier>
+      </IdentifierList>
+    </identification>
+    <characteristics>
+      <property name="Sensor Type">
+        <Term definition="urn:ogc:def:property:OGC:SensorType">Relative Humidity Sensor</Term>
+      </property>
+      <property name="Manufacturer">
+        <Term definition="urn:ogc:def:property:OGC:Manufacturer">Example Inc.</Term>
+      </property>
+      <property name="Model">
+        <Term definition="urn:ogc:def:property:OGC:Model">Humidex 2000</Term>
+      </property>
+    </characteristics>
+    <capabilities>
+      <CapabilityList>
+        <capability name="Humidity Measurement">
+          <Parameter name="MeasurementRange">
+            <value>[0, 100]</value>
+            <uom>%</uom>
+          </Parameter>
+          <Parameter name="Resolution">
+            <value>0.1</value>
+            <uom>%</uom>
+          </Parameter>
+        </capability>
+      </CapabilityList>
+    </capabilities>
+    <documentation>
+      <DocumentList>
+        <document>
+          <name>Calibration Certificate</name>
+          <description>Calibration certificate for humidity sensor</description>
+          <date>2024-04-07</date>
+          <location>calibration/certificate_humidity_sensor.pdf</location>
+        </document>
+        <document>
+          <name>User Manual</name>
+          <description>User manual for humidity sensor</description>
+          <date>2024-04-07</date>
+          <location>manuals/user_manual_humidity_sensor.pdf</location>
+        </document>
+      </DocumentList>
+    </documentation>
+  </Sensor>
+</sml>
